@@ -43,8 +43,20 @@ namespace WindowsFormsApp7
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            redLbl.Text = $"Red : {trackBar1.Value.ToString()}";
-            this.BackColor = Color.FromArgb(trackBar1.Value, 0, 0);
+            redLbl.Text = $"Red : {redTrackBar.Value.ToString()}";
+            greebLbl.Text = $"Green : {greenTrackBar.Value.ToString()}";
+            blueLbl.Text = $"Blue : {blueTrackBar.Value.ToString()}";
+            this.BackColor = Color.FromArgb(redTrackBar.Value, greenTrackBar.Value, blueTrackBar.Value);
+        }
+
+        private void redToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Red;
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Green;
         }
     }
 }
